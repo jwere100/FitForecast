@@ -5,6 +5,7 @@
 
 ---
 
+
 ## 🎯 Core Concept
 FitForecast is an interactive web app that lets users upload or select one garment (like a skirt or jacket), checks the **current weather**, and uses **AI to visualize the outfit on their body**.  
 It also recommends complementary clothing pieces for comfort and style — ensuring your outfit matches the forecast *and* your vibe.
