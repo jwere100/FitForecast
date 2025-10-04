@@ -38,12 +38,11 @@ It also recommends complementary clothing pieces for comfort and style — ensur
 
 | Category | Tools / APIs |
 |-----------|---------------|
-| **Frontend** | React + TailwindCSS |
-| **Backend** | FastAPI or Node.js (Express) |
+| **Frontend** | React (Vite) + JavaScript + Tailwind CSS |
+| **Backend** | FastAPI |
 | **Auth & Database** | Firebase or Supabase |
 | **Weather API** | OpenWeatherMap |
-| **AI Generation** | Replicate API (Stable Diffusion / InstantID) |
-| **Garment Detection (optional)** | Google Cloud Vision |
+| **AI Generation** | PyTorch + OpenCV + DeepFashion + Detectron |
 | **Hosting** | Vercel (frontend) + Render (backend) |
 
 ---
