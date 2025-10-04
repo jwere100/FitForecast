@@ -13,3 +13,30 @@ uploads/
 
 # OS files
 .DS_Store
+
+# Dependencies
+node_modules/
+package-lock.json
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Large files
+*.mp4
+*.mov
+*.avi
+*.zip
+*.exe
+
+# Logs
+*.log
+npm-debug.log*env/
+venv/
+env/
+venv/
+env/
