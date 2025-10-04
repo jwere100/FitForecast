@@ -56,5 +56,5 @@ It also recommends complementary clothing pieces for comfort and style — ensur
   Matches colors between garments using K-Means clustering or palette extraction.
 
 - **Weather-Aware Decision Engine**  
-  Provides feedback like:  
+  Provides feedback dependent on the weather.
 
