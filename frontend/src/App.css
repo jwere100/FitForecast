@@ -40,3 +40,108 @@
 .read-the-docs {
   color: #888;
 }
+
+/* ----------------------------- */
+/* Clueless-inspired closet UI    */
+/* ----------------------------- */
+
+:root{
+  /* calm brown palette (was pink) */
+  --pink-100: #fbf6f2; /* very light warm ivory */
+  --pink-200: #f3e7df; /* light beige */
+  --pink-400: #c9a78a; /* warm tan / calm-brown accent */
+  --gold: #d4af37;
+  --soft-white: #fffdfc;
+  --muted-gray: #9b9b9b;
+}
+
+/* Serif font for a chic, editorial look */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');
+
+body { font-family: 'Playfair Display', serif; }
+
+.closet-container{
+  max-width: 900px;
+  margin: 2rem auto;
+  background: linear-gradient(180deg, rgba(255,250,252,0.9), rgba(255,244,246,0.8));
+  border-radius: 18px;
+  padding: 1.25rem 1.5rem 2rem;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,0.6);
+  border: 1px solid rgba(212,175,55,0.12);
+}
+
+.closet-header{
+  text-align: center;
+  margin-bottom: 0.75rem;
+}
+.closet-title{
+  font-family: 'Playfair Display', serif;
+  color: #6b4a3e; /* calm brown */
+  margin: 0;
+  font-size: 1.6rem;
+  letter-spacing: 0.6px;
+}
+.closet-sub{
+  margin: 0.25rem 0 0;
+  font-size: 0.9rem;
+  color: var(--muted-gray);
+}
+
+.carousel-row{ margin-top: 1rem; }
+.row-title{ color: #6b4a3e; font-weight:600; margin-bottom:8px; }
+
+.carousel{
+  display:flex; align-items:center; justify-content:center; gap:12px;
+}
+
+.slot{ width: 320px; height: 220px; display:flex; align-items:center; justify-content:center; }
+
+.garment-card{
+  width: 300px; height: 200px; border-radius: 12px; overflow: hidden; position: relative; display:flex; align-items:center; justify-content:center;
+  transition: transform 350ms cubic-bezier(.2,.9,.2,1), box-shadow 200ms;
+}
+.garment-card.glossy{
+  background: linear-gradient(180deg, var(--soft-white), var(--pink-100));
+  border: 1px solid rgba(212,175,55,0.18);
+  box-shadow: 0 10px 30px rgba(107,70,60,0.06), inset 0 2px 8px rgba(255,255,255,0.6);
+}
+.garment-card:hover{ transform: translateY(-6px) scale(1.02); box-shadow: 0 18px 40px rgba(107,70,60,0.12); }
+
+.garment-img{ width:100%; height:100%; object-fit:cover; display:block; }
+.garment-meta{ position:absolute; left:10px; bottom:10px; background: rgba(255,255,255,0.7); padding:4px 8px; border-radius:999px; font-size:0.8rem; color:#6b4a3e; border: 1px solid rgba(0,0,0,0.04); }
+
+.empty-card{ width:300px; height:200px; display:flex; align-items:center; justify-content:center; border-radius:12px; background:linear-gradient(180deg, #fffafc, #fff3f7); color:var(--muted-gray); border:1px dashed rgba(107,70,60,0.06); }
+
+.arrow-btn{
+  width:44px; height:44px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; background: linear-gradient(180deg, #fff, var(--pink-200)); border:1px solid rgba(212,175,55,0.14); color:#6b4a3e; font-weight:700; cursor:pointer; transition: transform 150ms;
+}
+.arrow-btn:hover{ transform: scale(1.06); box-shadow: 0 6px 18px rgba(107,70,60,0.08); }
+.arrow-btn.left{ margin-right:6px; }
+.arrow-btn.right{ margin-left:6px; }
+
+.match-area{ display:flex; justify-content:center; margin-top:16px; }
+.match-btn{
+  background: linear-gradient(90deg, var(--pink-400), #b07a53);
+  color: white; padding:10px 22px; border-radius:999px; font-weight:700; border: 1px solid rgba(255,255,255,0.12); cursor:pointer; box-shadow: 0 8px 30px rgba(176,122,83,0.14);
+}
+.match-btn:disabled{ opacity:0.45; cursor:not-allowed; }
+
+/* Modal */
+.match-modal{ position:fixed; inset:0; display:flex; align-items:center; justify-content:center; background: rgba(11,7,9,0.45); z-index:60; }
+.match-card{ width:680px; max-width:92%; background:linear-gradient(180deg,#fff,#fffaf8); border-radius:14px; padding:18px; box-shadow: 0 30px 80px rgba(0,0,0,0.35); border:1px solid rgba(212,175,55,0.12); }
+.match-title{ margin:0; color:#6b4a3e; font-size:1.2rem; text-align:center; }
+.match-preview{ display:flex; gap:18px; align-items:center; justify-content:center; margin-top:14px; }
+.preview-column{ width:45%; display:flex; flex-direction:column; align-items:center; }
+.preview-column img{ width: 100%; height: 280px; object-fit: cover; border-radius:10px; box-shadow: 0 10px 30px rgba(0,0,0,0.12); }
+.preview-label{ font-size:0.85rem; color:var(--muted-gray); margin-top:8px; }
+.preview-empty{ width:100%; height:280px; display:flex; align-items:center; justify-content:center; border-radius:10px; background:linear-gradient(180deg,#fff6fb,#fff0f7); color:var(--muted-gray); border:1px dashed rgba(107,70,60,0.06); }
+
+.match-actions{ display:flex; gap:10px; justify-content:center; margin-top:14px; }
+.btn-secondary{ background:transparent; border:1px solid rgba(107,70,60,0.08); padding:8px 12px; border-radius:8px; cursor:pointer; }
+.btn-primary{ background:var(--gold); color:#2b1a10; padding:8px 12px; border-radius:8px; border:none; cursor:pointer; font-weight:700; }
+
+/* Responsive */
+@media (max-width:760px){
+  .slot, .garment-card{ width: 260px; height:180px; }
+  .preview-column img, .preview-empty{ height:200px; }
+}
