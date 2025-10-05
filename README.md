@@ -1,6 +1,5 @@
 # FitForecast
 
-# 👗 FitForecast
 > *Your AI-powered fashion helper that recommends and visualizes weather-ready outfits.*
 
 ---
